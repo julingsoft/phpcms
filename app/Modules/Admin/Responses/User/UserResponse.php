@@ -2,31 +2,15 @@
 
 declare(strict_types=1);
 
-namespace App\Entities;
+namespace App\Modules\Admin\Responses\User;
 
 use Juling\Foundation\Support\DTOHelper;
 use OpenApi\Attributes as OA;
 
-#[OA\Schema(schema: 'UserEntity')]
-class UserEntity
+#[OA\Schema(schema: 'UserResponse')]
+class UserResponse
 {
     use DTOHelper;
-
-    const string getId = 'id';
-
-    const string getName = 'name';
-
-    const string getEmail = 'email';
-
-    const string getEmailVerifiedAt = 'email_verified_at';
-
-    const string getPassword = 'password';
-
-    const string getRememberToken = 'remember_token';
-
-    const string getCreatedAt = 'created_at';
-
-    const string getUpdatedAt = 'updated_at';
 
     #[OA\Property(property: 'id', description: 'ID', type: 'string')]
     private string $id;
@@ -40,16 +24,13 @@ class UserEntity
     #[OA\Property(property: 'emailVerifiedAt', description: '', type: 'string')]
     private string $emailVerifiedAt;
 
-    #[OA\Property(property: 'password', description: '', type: 'string')]
-    private string $password;
-
     #[OA\Property(property: 'rememberToken', description: '', type: 'string')]
     private string $rememberToken;
 
-    #[OA\Property(property: 'createdAt', description: '创建时间', type: 'string')]
+    #[OA\Property(property: 'createdAt', description: '', type: 'string')]
     private string $createdAt;
 
-    #[OA\Property(property: 'updatedAt', description: '更新时间', type: 'string')]
+    #[OA\Property(property: 'updatedAt', description: '', type: 'string')]
     private string $updatedAt;
 
     /**
@@ -114,22 +95,6 @@ class UserEntity
     public function setEmailVerifiedAt(string $emailVerifiedAt): void
     {
         $this->emailVerifiedAt = $emailVerifiedAt;
-    }
-
-    /**
-     * 获取
-     */
-    public function getPassword(): string
-    {
-        return $this->password;
-    }
-
-    /**
-     * 设置
-     */
-    public function setPassword(string $password): void
-    {
-        $this->password = $password;
     }
 
     /**
