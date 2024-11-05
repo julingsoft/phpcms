@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "41a0e0d4815abc52aa8da080ab89eee4",
+    "content-hash": "ba6f676bde786d3d21260a0b9a4a0b1d",
     "packages": [
         {
             "name": "alibabacloud/aliyun-log-php-sdk",
@@ -288,6 +288,141 @@
                 }
             ],
             "time": "2024-02-09T16:56:22+00:00"
+        },
+        {
+            "name": "casbin/casbin",
+            "version": "v4.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-casbin/php-casbin.git",
+                "reference": "89c9f1d43c2852c7d7d7c444581d21f1ebf78b59"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-casbin/php-casbin/zipball/89c9f1d43c2852c7d7d7c444581d21f1ebf78b59",
+                "reference": "89c9f1d43c2852c7d7d7c444581d21f1ebf78b59",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0",
+                "psr/log": "^2.0|^3.0",
+                "symfony/cache": "^6.0|^7.0",
+                "symfony/expression-language": "^6.0|^7.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.6",
+                "php-coveralls/php-coveralls": "^2.4",
+                "phpstan/phpstan": "^1.11",
+                "phpunit/phpunit": "~9.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Casbin\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "TechLee",
+                    "email": "techlee@qq.com"
+                }
+            ],
+            "description": "a powerful and efficient open-source access control library for php projects.",
+            "keywords": [
+                "abac",
+                "access control",
+                "acl",
+                "authorization",
+                "casbin",
+                "permission",
+                "rbac"
+            ],
+            "support": {
+                "issues": "https://github.com/php-casbin/php-casbin/issues",
+                "source": "https://github.com/php-casbin/php-casbin/tree/v4.0.0"
+            },
+            "funding": [
+                {
+                    "url": "https://opencollective.com/casbin",
+                    "type": "open_collective"
+                }
+            ],
+            "time": "2024-10-21T16:08:27+00:00"
+        },
+        {
+            "name": "casbin/laravel-authz",
+            "version": "v4.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-casbin/laravel-authz.git",
+                "reference": "d9906f8c767f0f1dc6106b56981a3a2759035f1d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-casbin/laravel-authz/zipball/d9906f8c767f0f1dc6106b56981a3a2759035f1d",
+                "reference": "d9906f8c767f0f1dc6106b56981a3a2759035f1d",
+                "shasum": ""
+            },
+            "require": {
+                "casbin/casbin": "~4.0",
+                "illuminate/console": "~8.0|~9.0|~10.0|~11.0",
+                "illuminate/database": "~8.0|~9.0|~10.0|~11.0",
+                "illuminate/support": "~8.0|~9.0|~10.0|~11.0",
+                "php": ">=8.0"
+            },
+            "require-dev": {
+                "laravel/laravel": "~9.0|~10.0|~11.0",
+                "mockery/mockery": "^1.0",
+                "php-coveralls/php-coveralls": "^2.7",
+                "phpunit/phpunit": "~9.0|~10.5"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Lauthz\\LauthzServiceProvider"
+                    ],
+                    "aliases": {
+                        "Enforcer": "Lauthz\\Facades\\Enforcer"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Lauthz\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "TechLee",
+                    "email": "techlee@qq.com"
+                }
+            ],
+            "description": "An authorization library that supports access control models like ACL, RBAC, ABAC in Laravel. ",
+            "keywords": [
+                "abac",
+                "access-control",
+                "acl",
+                "authorization",
+                "authz",
+                "casbin",
+                "laravel",
+                "permission",
+                "rbac"
+            ],
+            "support": {
+                "issues": "https://github.com/php-casbin/laravel-authz/issues",
+                "source": "https://github.com/php-casbin/laravel-authz/tree/v4.0.0"
+            },
+            "time": "2024-10-29T16:42:21+00:00"
         },
         {
             "name": "dasprid/enum",
@@ -5968,6 +6103,70 @@
                 }
             ],
             "time": "2024-04-18T09:32:20+00:00"
+        },
+        {
+            "name": "symfony/expression-language",
+            "version": "v7.1.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/expression-language.git",
+                "reference": "c3a1224bc144b36cd79149b42c1aecd5f81395a5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/expression-language/zipball/c3a1224bc144b36cd79149b42c1aecd5f81395a5",
+                "reference": "c3a1224bc144b36cd79149b42c1aecd5f81395a5",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.2",
+                "symfony/cache": "^6.4|^7.0",
+                "symfony/deprecation-contracts": "^2.5|^3",
+                "symfony/service-contracts": "^2.5|^3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\ExpressionLanguage\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Provides an engine that can compile and evaluate expressions",
+            "homepage": "https://symfony.com",
+            "support": {
+                "source": "https://github.com/symfony/expression-language/tree/v7.1.6"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2024-10-09T08:46:59+00:00"
         },
         {
             "name": "symfony/finder",
