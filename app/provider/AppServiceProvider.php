@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace app;
+namespace app\provider;
 
-use think\Service;
+use think\Service as ServiceProvider;
 
 /**
  * 应用服务类
  */
-class AppService extends Service
+class AppServiceProvider extends ServiceProvider
 {
     public function register()
     {

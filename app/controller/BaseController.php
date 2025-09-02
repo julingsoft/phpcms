@@ -2,10 +2,11 @@
 
 declare(strict_types=1);
 
-namespace app;
+namespace app\controller;
 
 use think\App;
 use think\exception\ValidateException;
+use think\Request;
 use think\Validate;
 
 /**
@@ -14,37 +15,27 @@ use think\Validate;
 abstract class BaseController
 {
     /**
-     * Request实例
-     *
-     * @var \think\Request
+     * 应用实例
      */
-    protected $request;
+    protected App $app;
 
     /**
-     * 应用实例
-     *
-     * @var \think\App
+     * Request实例
      */
-    protected $app;
+    protected Request $request;
 
     /**
      * 是否批量验证
-     *
-     * @var bool
      */
-    protected $batchValidate = false;
+    protected bool $batchValidate = false;
 
     /**
      * 控制器中间件
-     *
-     * @var array
      */
-    protected $middleware = [];
+    protected array $middleware = [];
 
     /**
      * 构造方法
-     *
-     * @param  App  $app  应用对象
      */
     public function __construct(App $app)
     {
