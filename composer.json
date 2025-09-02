@@ -1,0 +1,31 @@
+{
+    "name": "phpcms/phpcms",
+    "description": "the new cms",
+    "type": "project",
+    "keywords": ["phpcms", "php", "mysql", "thinkphp"],
+    "license": "Apache-2.0",
+    "require": {
+        "php": "^8.4",
+        "topthink/framework": "^8.0",
+        "topthink/think-orm": "^4.0",
+        "topthink/think-filesystem": "^3.0"
+    },
+    "require-dev": {
+        "topthink/think-dumper": "^1.0",
+        "topthink/think-trace": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "app\\": "app/"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "@php artisan service:discover",
+            "@php artisan vendor:publish"
+        ]
+    },
+    "config": {
+        "preferred-install": "dist"
+    }
+}
