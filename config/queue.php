@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'default' => 'sync',
+    'default' => env('QUEUE_CONNECTION', 'sync'),
     'connections' => [
         'sync' => [
             'type' => 'sync',
@@ -15,8 +15,8 @@ return [
         'redis' => [
             'type' => 'redis',
             'queue' => 'default',
-            'host' => '127.0.0.1',
-            'port' => 6379,
+            'host' => env('REDIS_HOST', '127.0.0.1'),
+            'port' => env('REDIS_PORT', 6379),
             'password' => '',
             'select' => 0,
             'timeout' => 0,

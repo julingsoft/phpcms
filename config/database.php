@@ -2,7 +2,7 @@
 
 return [
     // 默认使用的数据库连接配置
-    'default' => env('DB_DRIVER', 'mysql'),
+    'default' => env('DB_CONNECTION', 'mysql'),
 
     // 自定义时间查询规则
     'time_query_rule' => [],
@@ -22,15 +22,15 @@ return [
     'connections' => [
         'mysql' => [
             // 数据库类型
-            'type' => env('DB_TYPE', 'mysql'),
+            'type' => 'mysql',
             // 服务器地址
             'hostname' => env('DB_HOST', '127.0.0.1'),
             // 数据库名
-            'database' => env('DB_NAME', ''),
+            'database' => env('DB_DATABASE', 'phpcms'),
             // 用户名
-            'username' => env('DB_USER', 'root'),
+            'username' => env('DB_USERNAME', 'root'),
             // 密码
-            'password' => env('DB_PASS', ''),
+            'password' => env('DB_PASSWORD', ''),
             // 端口
             'hostport' => env('DB_PORT', '3306'),
             // 数据库连接参数

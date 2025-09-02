@@ -26,6 +26,6 @@ return [
     'visit_enable_show_rate_limit' => true,
     // 访问受限时返回的响应
     'visit_fail_response' => function (Throttle $throttle, Request $request, int $wait_seconds) {
-        return Response::create('Too many requests, try again after '.$wait_seconds.' seconds.')->code(429);
+        return Response::create('Too many requests, try again after ' . $wait_seconds . ' seconds.')->code(429);
     },
 ];
