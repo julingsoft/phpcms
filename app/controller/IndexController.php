@@ -8,6 +8,6 @@ class IndexController extends BaseController
 {
     public function index()
     {
-        return 'hello';
+        return 'IndexController';
     }
 }
