@@ -4,10 +4,12 @@ declare(strict_types=1);
 
 namespace app\modules\admin\controller;
 
-class IndexController
+use think\response\View;
+
+class IndexController extends BaseController
 {
-    public function index()
+    public function index(): View
     {
-        return 'admin IndexController';
+        return view('/index');
     }
 }
