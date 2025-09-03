@@ -14,10 +14,11 @@ class UserModel extends Model
      */
     protected $name = 'user';
 
+
     /**
      * 设置字段
      */
-    protected array $field = [
+    protected $field = [
         'id',
         'username',
         'password',
