@@ -2,15 +2,17 @@
 
 use think\App;
 
-// [ 应用入口文件 ]
+define('APP_START', microtime(true));
 
-require __DIR__ . '/../vendor/autoload.php';
+// Register the Composer autoloader...
+require __DIR__.'/../vendor/autoload.php';
 
-// 执行HTTP应用并响应
-$http = (new App())->http;
+// Bootstrap framework and handle the request...
+/** @var App $app */
+$app = require_once __DIR__.'/../bootstrap/app.php';
 
-$response = $http->run();
+$response = $app->http->run();
 
 $response->send();
 
-$http->end($response);
+$app->http->end($response);

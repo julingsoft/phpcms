@@ -3,9 +3,13 @@
 
 use think\App;
 
-// 命令行入口文件
-// 加载基础文件
-require __DIR__ . '/vendor/autoload.php';
+define('APP_START', microtime(true));
 
-// 应用初始化
-(new App())->console->run();
+// Register the Composer autoloader...
+require __DIR__.'/vendor/autoload.php';
+
+// Bootstrap framework and handle the command...
+/** @var App $app */
+$app = require_once __DIR__.'/bootstrap/app.php';
+
+$app->console->run();
