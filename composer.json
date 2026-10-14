@@ -1,5 +1,5 @@
 {
-    "name": "topthink/think",
+    "name": "phpcms/phpcms",
     "description": "the new thinkphp framework",
     "type": "project",
     "keywords": [
@@ -7,34 +7,23 @@
         "thinkphp",
         "ORM"
     ],
-    "homepage": "https://www.thinkphp.cn/",
     "license": "Apache-2.0",
-    "authors": [
-        {
-            "name": "liu21st",
-            "email": "liu21st@gmail.com"
-        },
-        {
-            "name": "yunwuxin",
-            "email": "448901948@qq.com"
-        }
-    ],
     "require": {
-        "php": ">=8.0.0",
+        "php": "^8.4",
         "topthink/framework": "^8.0",
-        "topthink/think-orm": "^3.0|^4.0",
-        "topthink/think-filesystem": "^2.0|^3.0"
+        "topthink/think-orm": "^4.0",
+        "topthink/think-filesystem": "^3.0",
+        "topthink/think-worker": "^5.0",
+        "topthink/think-queue": "^3.0"
     },
     "require-dev": {
         "topthink/think-dumper": "^1.0",
-        "topthink/think-trace": "^2.0"
+        "topthink/think-trace": "^2.0",
+        "laravel/pint": "^1.32"
     },
     "autoload": {
         "psr-4": {
-            "app\\": "app"
-        },
-        "psr-0": {
-            "": "extend/"
+            "app\\": "app/"
         }
     },
     "config": {
@@ -42,8 +31,8 @@
     },
     "scripts": {
         "post-autoload-dump": [
-            "@php think service:discover",
-            "@php think vendor:publish"
+            "@php artisan service:discover",
+            "@php artisan vendor:publish"
         ]
     }
 }

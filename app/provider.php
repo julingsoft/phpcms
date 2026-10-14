@@ -1,9 +1,9 @@
 <?php
-use app\ExceptionHandle;
-use app\Request;
 
-// 容器Provider定义文件
+use app\exception\Handler;
+use app\support\Request;
+
 return [
-    'think\Request'          => Request::class,
-    'think\exception\Handle' => ExceptionHandle::class,
+    'think\Request' => Request::class,
+    'think\exception\Handle' => Handler::class,
 ];

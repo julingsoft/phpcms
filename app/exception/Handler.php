@@ -1,5 +1,6 @@
 <?php
-namespace app;
+
+namespace app\exception;
 
 use think\db\exception\DataNotFoundException;
 use think\db\exception\ModelNotFoundException;
@@ -7,16 +8,18 @@ use think\exception\Handle;
 use think\exception\HttpException;
 use think\exception\HttpResponseException;
 use think\exception\ValidateException;
+use think\Request;
 use think\Response;
 use Throwable;
 
 /**
  * 应用异常处理类
  */
-class ExceptionHandle extends Handle
+class Handler extends Handle
 {
     /**
      * 不需要记录信息（日志）的异常类列表
+     *
      * @var array
      */
     protected $ignoreReport = [
@@ -29,10 +32,6 @@ class ExceptionHandle extends Handle
 
     /**
      * 记录异常信息（包括日志或者其它方式记录）
-     *
-     * @access public
-     * @param  Throwable $exception
-     * @return void
      */
     public function report(Throwable $exception): void
     {
@@ -43,10 +42,7 @@ class ExceptionHandle extends Handle
     /**
      * Render an exception into an HTTP response.
      *
-     * @access public
-     * @param \think\Request   $request
-     * @param Throwable $e
-     * @return Response
+     * @param  Request  $request
      */
     public function render($request, Throwable $e): Response
     {
